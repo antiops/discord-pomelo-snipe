@@ -1,6 +1,6 @@
 # discord-pomelo-snipe
 
-- Tries to request a username every 100 seconds (configurable)
+- Tries to request a username every 300 seconds (configurable)
 - Pings you with a webhook when stuff happens
 - Also pings you if your token stops working
 
@@ -18,7 +18,7 @@ It will also ping you and exit the script if Discord says the token is bad. Upda
   - `DISCORD_USER_ID`: Your user ID. This ID will be pinged
   - `DISCORD_TOKEN`: Your user token. Required to make the API requests
   - `DISCORD_WEBHOOK`: A Webhook. Messages will be sent to it
-  - `LOOP_TIMEOUT`: Time to wait **in seconds** before retrying (Default: `100`)
+  - `LOOP_TIMEOUT`: Time to wait **in seconds** before retrying (Default: `300s`/`5min`)
   - `USER_AGENT`: The User-Agent used in API requests. Change if you want
 
 ## Get the code
