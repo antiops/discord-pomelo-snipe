@@ -44,16 +44,15 @@ const sendPing = async (message) => {
     await hook.send(successMessage)
     return process.exit(0)
   } catch (err) {
-    console.log(`[!] Failed to send webhook request. Last Message: ${message}`)
-    return process.exit(1)
+    throw new Error(`[!] Failed to send webhook request. Last Message: ${message}`)
   }
 }
 
 const preCheck = () => {
-  if (!config.discord.username) throw Error('Missing Username to Snipe')
-  if (!config.discord.userID) throw Error('Missing User ID. Required to ping you when when stuff happens')
-  if (!config.discord.token) throw Error('Missing User Token. Required to make Discord API calls')
-  if (!config.discord.webhook) throw Error('Missing Discord Webhook. Required to send you messages when stuff happens')
+  if (!config.discord.username) throw new Error('Missing Username to Snipe')
+  if (!config.discord.userID) throw new Error('Missing User ID. Required to ping you when when stuff happens')
+  if (!config.discord.token) throw new Error('Missing User Token. Required to make Discord API calls')
+  if (!config.discord.webhook) throw new Error('Missing Discord Webhook. Required to send you messages when stuff happens')
   return true
 }
 
