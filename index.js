@@ -64,8 +64,8 @@ const runSniper = async () => {
   while (true) {
     try {
       const res = await axios(options)
-      const data = res.data
-      return sendPing(`API returned something that isn't an error! Check to see if the username was grabbed [${data.code}:${data.message}]`)
+      const resData = res.data
+      return sendPing(`API returned something that isn't an error! Check to see if the username was grabbed [${resData.code}:${resData.message}]`)
     } catch (err) {
       if (err.response.data.code === 0) return sendPing(`Token is bad, API didn't accept it [${err.response.data.code}:${err.response.data.message}]`)
 
