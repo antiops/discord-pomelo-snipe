@@ -1,5 +1,8 @@
 # discord-pomelo-snipe
 
+> Discord accidently banned everyone who used the pomelo api, they unbanned everyone but use at your own risk
+> [Reddit.com - Anyone elses account randomly disabled?](https://old.reddit.com/r/discordapp/comments/13d01h7/anyone_elses_account_randomly_disabled/)
+
 - Tries to request a username every 300 seconds (configurable)
 - Pings you with a webhook when stuff happens
 - Also pings you if your token stops working
